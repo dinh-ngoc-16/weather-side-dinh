@@ -278,7 +278,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: transform 0.3s linear;
+  -webkit-transition: transform 0.5s linear;
   -webkit-transform: translateX(0%);
 }
 .main .detail .title .contract__color .contract__point:hover {
