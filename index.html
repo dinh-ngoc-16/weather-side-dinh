@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/02d@2x.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <div class="main-section">
+          <div class="search-bar">
+            <i class="fa fa-search search-icon"></i>
+            <input
+              type="text"
+              name="search-city"
+              id="search-input"
+              placeholder="search for city ..."
+            />
+          </div>
+          <div class="info-warraper">
+            <p class="city-name" id="city-name">Thành phố Hồ Chí Minh</p>
+            <p class="weather-state" id="weather-state">Mây Thưa</p>
+            <img
+              class="weather-icon"
+              src="http://openweathermap.org/img/wn/02n@2x.png"
+              alt="weather-icon"
+              id="weather-icon"
+            />
+            <span class="temperature" id="temperature">26</span>
+            <div class="timeCurrent">
+              <span class="day" id="day">Thứ Hai,</span>
+              <span class="currentTime" id="currentTime">23:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="daily__forecast">
+          <div class="title">
+            <h1>Week</h1>
+            <input type="checkbox" class="check__point" id="check__point" />
+            <label
+              for="check__point"
+              class="contract__color"
+              id="contract__color"
+            >
+              <label
+                for="check__point"
+                class="contract__point"
+                id="contract__point"
+              ></label>
+            </label>
+          </div>
+          <div class="row" id="daily"></div>
+        </div>
+        <div class="daily__today">
+          <div class="row">
+            <div class="col">
+              <div class="item">
+                <h1>Sunrise</h1>
+                <div class="data">
+                  <i class="fa fa-arrow-up"></i>
+                  <span id="sunrise">06:20</span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="item">
+                <h1>Sunset</h1>
+                <div class="data">
+                  <i class="fa fa-arrow-down"></i>
+                  <span id="sunset">06:20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="item">
+                <h1>Wind speed</h1>
+                <div class="data">
+                  <i class="fa fa-wind"></i>
+                  <span id="windSpeed">06:20</span>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="item">
+                <h1>Humidity</h1>
+                <div class="data">
+                  <div class="boder">
+                    <div class="point" id="level"></div>
+                  </div>
+                  <span id="humidity">89%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <script src="./js/animation/contractButton.js"></script> -->
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
