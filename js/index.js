@@ -25,8 +25,7 @@ const fetchData = (result) => {
 
   weatherIcon.src = `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`;
 
-  temperature.innerHTML =
-    Math.round(Number(result.data.main.temp) / 10) || DEFAULT_VALUE;
+  temperature.innerHTML = Math.round(+result.data.main.temp) || DEFAULT_VALUE;
 
   date.innerHTML = moment().format("dddd") + ":";
 
@@ -61,7 +60,7 @@ const dataDaily = (lat = 10.85, lon = 106.65) => {
             <img src="http://openweathermap.org/img/wn/${
               item.weather[0].icon
             }@2x.png" alt="" />
-            <p>${Math.round(item.temp.max / 10)}</p>
+            <p>${Math.round(item.temp.max)}</p>
           </div>
         </div>`;
       });
@@ -107,5 +106,10 @@ searchInput.addEventListener("change", (e) => {
 });
 
 getEle("check__point").addEventListener("click", function () {
-  console.log(getEle("check__point").checked);
+  const check = getEle("check__point").checked;
+  if (check) {
+    getEle("detail").style.backgroundColor = "#000";
+  } else {
+    getEle("detail").style.backgroundColor = "#f8f8f8";
+  }
 });

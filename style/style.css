@@ -255,12 +255,12 @@ body {
     height: inherit;
   }
 }
-.main .detail .title .contract__color {
-  height: 25px;
+.main .detail .daily__forecast .title .contract__color {
+  height: 26px;
   width: 55px;
   border: 2px solid #a6a6a65e;
   border-radius: 30px;
-  box-shadow: 2px 2px 5px #f8f8f8;
+  /* box-shadow: 2px 2px 5px #f8f8f8; */
   padding: 2px;
   margin: 20px 40px 0 0;
   display: flex;
@@ -268,30 +268,36 @@ body {
   position: relative;
   background: #fff;
 }
-.main .detail .title .contract__color .contract__point {
+.main .detail .daily__forecast .title .contract__color .contract__point {
   height: 95%;
   width: 30px;
   background: #2193b0;
-  border-radius: 70%;
+  border-radius: 100%;
   border: none;
   margin: 1px;
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: transform 0.4s linear;
+  -webkit-transition: transform 0.3s linear;
   -webkit-transform: translateX(0%);
 }
-.main .detail .title .contract__color .contract__point:hover {
+.main .detail .daily__forecast .title .contract__color .contract__point:hover {
   cursor: pointer;
 }
-.main .detail .title .check__point {
+.main .detail .check__point {
   display: none;
 }
-.main .detail .title .check__point:checked ~ .contract__color .contract__point {
+.main
+  .detail
+  .check__point:checked
+  ~ .daily__forecast
+  .title
+  .contract__color
+  .contract__point {
   -webkit-transform: translateX(90%);
   background: #000;
 }
 
-.main .detail .title input[type="checkbox"]:checked ~ .contract__color {
-  background: #ffffff;
+.main .detail .check__point:checked ~ .contract__color {
+  background: #fff;
 }
