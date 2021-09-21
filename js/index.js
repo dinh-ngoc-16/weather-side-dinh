@@ -23,7 +23,7 @@ const fetchData = (result) => {
   cityName.innerHTML = result.data.name || DEFAULT_VALUE;
   weatherState.innerHTML = result.data.weather[0].description || DEFAULT_VALUE;
 
-  weatherIcon.src = `http://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${result.data.weather[0].icon}@2x.png`;
 
   temperature.innerHTML = Math.round(+result.data.main.temp) || DEFAULT_VALUE;
 
@@ -57,7 +57,7 @@ const dataDaily = (lat = 10.85, lon = 106.65) => {
           <div class="col">
           <div class="item">
             <p>${moment.unix(item.dt).format("dddd")}</p>
-            <img src="http://openweathermap.org/img/wn/${
+            <img src="https://openweathermap.org/img/wn/${
               item.weather[0].icon
             }@2x.png" alt="" />
             <p>${Math.round(item.temp.max)}</p>
