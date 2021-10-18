@@ -105,11 +105,11 @@ searchInput.addEventListener("change", (e) => {
   }
 });
 
-getEle("check__point").addEventListener("click", function () {
-  const check = getEle("check__point").checked;
-  if (check) {
-    getEle("detail").style.backgroundColor = "#000";
-  } else {
-    getEle("detail").style.backgroundColor = "#f8f8f8";
-  }
-});
+// getEle("check__point").addEventListener("click", function () {
+//   const check = getEle("check__point").checked;
+//   if (check) {
+//     getEle("detail").style.backgroundColor = "#000";
+//   } else {
+//     getEle("detail").style.backgroundColor = "#f8f8f8";
+//   }
+// });
